@@ -23,6 +23,9 @@ import { MdWatchLater } from "react-icons/md";
 import { AiOutlineLike } from "react-icons/ai";
 import { MdPlaylistAddCheck } from "react-icons/md";
 import { RiHistoryLine } from "react-icons/ri";
+import { SiSemanticscholar } from "react-icons/si";
+import { GiAmpleDress } from "react-icons/gi";
+import { PiFilmSlateBold } from "react-icons/pi";
 
 function Sidebar() {
   const SidebarItems1 = [
@@ -74,6 +77,63 @@ function Sidebar() {
       icon: <AiOutlineLike />
     },
   ]
+  const SidebarItems3 = [
+    {
+      id: 1,
+      name: "Trending",
+      icon: <SiTrendmicro />
+    },
+    {
+      id: 2,
+      name: "Shopping",
+      icon: <HiOutlineShoppingBag />
+    },
+    {
+      id: 3,
+      name: "Music",
+      icon: <SiYoutubemusic />
+    },
+    {
+      id: 4,
+      name: "Film",
+      icon: <PiFilmSlateBold />
+    },
+    {
+      id: 5,
+      name: "Live",
+      icon: <CgMediaLive />
+    },
+    {
+      id: 6,
+      name: "Gaming",
+      icon: <SiYoutubegaming />
+    },
+    {
+      id: 7,
+      name: "Newspaper",
+      icon: <FaRegNewspaper />
+    },
+    {
+      id: 8,
+      name: "Sports",
+      icon: <TfiCup />
+    },
+    {
+      id: 9,
+      name: "Courses",
+      icon: <SiSemanticscholar />
+    },
+    {
+      id: 10,
+      name: "Fashion & Beautify",
+      icon: <GiAmpleDress />
+    },
+    {
+      id: 11,
+      name: "Podcasts",
+      icon: <MdPodcasts />
+    }
+  ]
   return (
     <div className='px-6 w-[15%]'>
 
@@ -100,6 +160,24 @@ function Sidebar() {
         </div>
         {
           SidebarItems2.map((item) => {
+            return (
+              <div className='flex items-center space-x-6 hover:bg-gray-200 duration-300 rounded-full p-1.5'>
+                <div className='text-2xl cursor-pointer' >{item.icon}</div>
+                <span className='font-bold cursor-pointer'>{item.name}</span>
+              </div>
+            )
+          })
+        }
+      </div>
+      <br />
+      <hr />
+      {/* //explore section */}
+      <div className='mt-3 items-center space-y-3'>
+        <div className='flex items-center gap-3'>
+          <h1 className='font-semibold text-xl'>Explore</h1>
+        </div>
+        {
+          SidebarItems3.map((item) => {
             return (
               <div className='flex items-center space-x-6 hover:bg-gray-200 duration-300 rounded-full p-1.5'>
                 <div className='text-2xl cursor-pointer' >{item.icon}</div>
