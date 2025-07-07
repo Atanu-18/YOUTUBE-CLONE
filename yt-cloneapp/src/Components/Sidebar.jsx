@@ -23,9 +23,7 @@ import { MdWatchLater } from "react-icons/md";
 import { AiOutlineLike } from "react-icons/ai";
 import { MdPlaylistAddCheck } from "react-icons/md";
 import { RiHistoryLine } from "react-icons/ri";
-import { SiSemanticscholar } from "react-icons/si";
-import { GiAmpleDress } from "react-icons/gi";
-import { PiFilmSlateBold } from "react-icons/pi";
+
 
 function Sidebar() {
   const SidebarItems1 = [
@@ -96,7 +94,7 @@ function Sidebar() {
     {
       id: 4,
       name: "Film",
-      icon: <PiFilmSlateBold />
+      icon: <PiFilmSlateLight />
     },
     {
       id: 5,
@@ -121,12 +119,12 @@ function Sidebar() {
     {
       id: 9,
       name: "Courses",
-      icon: <SiSemanticscholar />
+      icon: <PiLightbulbLight />
     },
     {
       id: 10,
       name: "Fashion & Beautify",
-      icon: <GiAmpleDress />
+      icon: <SiStylelint />
     },
     {
       id: 11,
@@ -134,8 +132,30 @@ function Sidebar() {
       icon: <MdPodcasts />
     }
   ]
+  const SidebarItems4 = [
+    {
+      id: 1,
+      name: "Youtube Premium",
+      icon: <FaYoutube />
+    },
+    {
+      id: 2,
+      name: "Youtube Studio",
+      icon: <SiYoutubestudio />
+    },
+    {
+      id: 3,
+      name: "Youtube Music",
+      icon: <PiMusicNoteLight />
+    },
+    {
+      id: 4,
+      name: "Youtube Kids",
+      icon: <SiYoutubekids />
+    }
+  ]
   return (
-    <div className='px-6 w-[15%]'>
+    <div className='px-6 w-[15%] h-[calc(100vh-6.625rem)] overflow-y-scroll overflow-x-hidden mt-16'>
 
       {/* // home section */}
       <div className='items-center space-y-3'>
@@ -156,7 +176,7 @@ function Sidebar() {
       <div className='mt-3 items-center space-y-3'>
         <div className='flex items-center gap-3'>
           <h1 className='font-semibold text-xl'>You</h1>
-          <FaChevronRight/>
+          <FaChevronRight />
         </div>
         {
           SidebarItems2.map((item) => {
@@ -189,29 +209,32 @@ function Sidebar() {
       </div>
       <br />
       <hr />
-      {/* <GoHomeFill />
-      <SiYoutubeshorts />
-      <MdSubscriptions />
-      <FaChevronRight />
-      <FaYoutube />
-      <SiYoutubestudio />
-      <SiYoutubekids />
-      <SiYoutubemusic />
-      <SiTrendmicro />
-      <HiOutlineShoppingBag />
-      <PiMusicNoteLight />
-      <PiFilmSlateLight />
-      <CgMediaLive />
-      <SiYoutubegaming />
-      <FaRegNewspaper />
-      <TfiCup />
-      <PiLightbulbLight />
-      <SiStylelint />
-      <MdPodcasts /> */}
+      {/* //more section */}
+      <div className='mt-3 items-center space-y-3'>
+        <div className='flex items-center gap-3'>
+          <h1 className='font-semibold text-xl'>More from Youtube</h1>
+        </div>
+        {
+          SidebarItems4.map((item) => {
+            return (
+              <div className='flex items-center space-x-6 hover:bg-gray-200 duration-300 rounded-full p-1.5'>
+                <div className='text-2xl cursor-pointer text-red-500' >{item.icon}</div>
+                <span className='font-bold cursor-pointer'>{item.name}</span>
+              </div>
+            )
+          })
+        }
+        <hr />
+      </div>
+      <br />
 
-
-
-
+      <span className='font-semibold text-gray-500 text-xs'>About Press Copyright<br />Contact usCreator<br />AdvertiseDevelopers<br /> <br />
+        <p>
+          Terms Privacy Policy & Safety<br />How YouTube works<br />Test new features
+        </p>
+      </span>
+      <br />
+      <p className='text-xs text-gray-800 m-1'>© 2025 Atanu Mandal</p>
 
 
     </div>

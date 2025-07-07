@@ -9,7 +9,7 @@ import plogo from "../../public/plogo.jpg";
 
 function Navbar() {
   return (
-    <div className='flex justify-between px-6 py-2'>
+    <div className='flex justify-between px-6 py-2 bg-white fixed w-[100%] top-0'>
         <div className='flex gap-4 items-center cursor-pointer'>
           <HiOutlineMenu className='text-2xl'/> 
           <img src={logo} alt="" className='w-28'/> 
