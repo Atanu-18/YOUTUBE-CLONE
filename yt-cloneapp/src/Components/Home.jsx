@@ -1,6 +1,6 @@
 import React from 'react'
 import Sidebar from './Sidebar'
-import Video from './Video'; // ✅ 'Video' with capital V
+import Video from './Video'; 
 
 import { useAuth } from '../context/AuthProvider'
 
